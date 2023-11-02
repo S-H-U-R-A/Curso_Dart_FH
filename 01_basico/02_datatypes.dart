@@ -1,6 +1,4 @@
-import 'dart:ffi';
-
-main() {
+void main() {
   // ===== Números
   int a = 10;
   double b = 5.5;
@@ -62,5 +60,19 @@ main() {
     'edad': 60
   };
 
-  print(ironman); //Para acceder a los elementos funciona igual que en kotlin
+  //print(ironman['nivel']); //Para acceder a los elementos funciona igual que en kotlin
+
+  Map<String, dynamic> capitan =
+      new Map<String, dynamic>(); //Otra forma de declarar un mapa
+
+  capitan.addAll({
+    //Añade elementos al mapa en Kotlin se hace con put
+    'nombre': 'Steve',
+    'poder': 'Soportar suero sin morir'
+  }); //Añade elementos al mapa
+
+  capitan.addAll(ironman);
+
+  print(capitan);
+  
 }
