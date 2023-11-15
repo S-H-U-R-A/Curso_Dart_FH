@@ -32,8 +32,6 @@ int sumar(int x, int y) {
   return x + y;
 }
 
-int sumarFlecha(int x, int y) =>
-    x +
-    y; //Esto se conoce como función de flecha en Dart, sin embargoen kotlin esto simplemente es ahorrarme las llaves y el return, es decir, que en kotlin sería fun sumarFlecha(x: Int, y: Int) = x + y
+int sumarFlecha(int x, int y) => x + y; //Esto se conoce como función de flecha en Dart, sin embargo en kotlin esto simplemente es ahorrarme las llaves y el return, es decir, que en kotlin sería              fun sumarFlecha(x: Int, y: Int) = x + y
 
 
