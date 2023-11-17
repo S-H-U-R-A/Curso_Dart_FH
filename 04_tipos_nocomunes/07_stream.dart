@@ -20,7 +20,7 @@ void main(List<String> args) {
     (data) => print("Despegando consumidor 1 $data"),
     onError: (error) => print("Error! $error"),
     onDone: () => print("Misión completa"), //Se dispara cuando se cierra el flujo mediante el método close()
-    cancelOnError: false, //Si es true, cancela el flujo cuando se produce un error
+    cancelOnError: false, //Si es true, cancela el flujo cuando se produce un error, en los Flows de Kotlin cuando se produce un error se cancela el flujo, en los Streams de Dart no, por defecto es false
   );
 
   streamController.stream.listen( //Segundo listener para el mismo stream
