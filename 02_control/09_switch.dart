@@ -1,6 +1,8 @@
 import 'dart:math';
 
-void main(List<String> args) {int rnd = Random().nextInt(7); //El 7 indica hasta que número se puede generar el random, y empieza desde 0 por defecto, en kotlin podemos especificar el número de inicio
+void main(List<String> args) {
+
+  int rnd = Random().nextInt(7); //El 7 indica hasta que número se puede generar el random, y empieza desde 0 por defecto, en kotlin podemos especificar el número de inicio
 
   /*  
     val dia: String = when(rnd){ //El when es como el switch de Dart, si el bloque requiere más de una linea usamos las llaves {}
@@ -50,4 +52,19 @@ void main(List<String> args) {int rnd = Random().nextInt(7); //El 7 indica hasta
     default:
       print("No es un día de la semana");
   }
+
+String asciiCharType(int char) {
+  const space = 32;
+  const zero = 48;
+  const nine = 57;
+
+  return switch (char) {
+    < space => 'control',
+    == space => 'space',
+    > space && < zero => 'punctuation',
+    >= zero && <= nine => 'digit',
+    _ => ''
+  };
+}
+
 }

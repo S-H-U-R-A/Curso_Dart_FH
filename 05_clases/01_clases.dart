@@ -11,6 +11,8 @@ void main(List<String> args) {
 
   final Persona persona2 = new Persona.persona30("Melissa");
 
+  final Persona persona3 = new Persona.constructorSecundario(33);
+
 /*   persona.nombre = "Fernando";
   persona.edad = 33;
   persona.bio = "Nació por ahí"; */
